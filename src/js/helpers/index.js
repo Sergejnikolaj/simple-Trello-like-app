@@ -29,12 +29,11 @@ export const TrimTitle = (val, minLength) => {
 };
 
 export const AddToSortable = () => {
-  const nodes = document.querySelectorAll(".task-list");
-  for (let i = 0; nodes[i]; i++) {
-    let node = nodes[i];
-    var sortable = new Sortable(node, {
+  const taskList = document.querySelectorAll(".task-list");
+  taskList.forEach((li) => {
+    const sortable = new Sortable(li, {
       group: ".task-list",
       animation: 150,
     });
-  }
+  });
 };

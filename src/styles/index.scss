@@ -110,6 +110,9 @@ button:focus {
   justify-content: center;
 }
 
+.item:hover {
+  cursor: all-scroll;
+}
 .item {
   margin-bottom: 10px;
   padding-right: 10px;
