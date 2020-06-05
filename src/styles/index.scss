@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@import "variables";
+
+html {
+  font-size: $root-font-size;
+  font-family: $font-family;
+  margin: 0 auto;
+  text-align: center;
+  //background-image: url("https://i.ytimg.com/vi/Pch55Y9F7bw/maxresdefault.jpg");
+}
+
+p {
+  font-size: $paragraph-font-size;
+}
+button,
+input {
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+}
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.header {
+  width: 100%;
+  font-style: italic;
+}
+.create-new-column {
+  display: flex;
+  align-items: center;
+  max-height: 43px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #dfe3e6;
+  min-width: 262px;
+  justify-content: flex-end;
+  padding: 5px;
+  border-radius: 3px;
+  flex-direction: row-reverse;
+
+  span {
+    color: $default-grey-color;
+  }
+}
+.create-task-list:hover {
+  color: $success-green-color;
+}
+.create-task-list {
+  padding: 0px;
+  font-size: 2em;
+  margin: 0px 5px;
+  color: $default-grey-color;
+}
+.task-list-wrapper {
+  max-width: 252px;
+}
+.task-list {
+  height: auto;
+  min-height: 15px;
+  margin: 0px;
+  background-color: transparent;
+  padding: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  min-height: 59px;
+  flex-direction: column;
+}
+.task-manager-wrapper {
+  display: flex;
+  min-height: 60px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  .task-manager {
+    position: relative;
+    padding-right: 272px;
+    display: flex;
+  }
+}
+.card-list-wrapper {
+  margin-right: 10px;
+  max-width: 272px;
+}
+.card-act-wrapper {
+  background-color: #dfe3e6;
+  padding: 10px;
+  position: relative;
+  max-width: 300px;
+  border-radius: 3px;
+}
+.add-task-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin-bottom: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+  min-height: 35px;
+  background-color: #fff;
+  border-radius: 3px;
+  max-width: 242px;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+}
+.save-task-value:hover {
+  color: $success-green-color;
+}
+.save-task-value {
+  height: 35px;
+  font-size: 1.3em;
+  color: $default-grey-color;
+}
+
+.task-column-title {
+  padding: 0px;
+  min-height: 31px;
+  background-color: #fff;
+  padding-left: 5px;
+  font-size: 0.9em;
+}
+.delete-task-btn:hover {
+  color: $error-red-color;
+}
+.delete-task-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: $default-grey-color;
+  font-size: 1.5em;
+}
+.delete-column-btn:hover {
+  color: $error-red-color;
+}
+.delete-column-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  right: 0px;
+  max-height: 35px;
+  color: $default-grey-color;
+  font-size: 2em;
+  padding-right: 2px;
+}
+
+.add-task-btn:hover {
+  color: #000;
+}
+.add-task-btn {
+  min-height: 30px;
+  background-color: $success-green-color;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+.delete-column-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  position: relative;
+}
+
+.column-title-wrap {
+  min-width: 252px;
+  min-height: 35px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.column-title:hover {
+  cursor: pointer;
+}
+.column-title {
+  max-width: 210px;
+  font-weight: bold;
+  overflow-x: hidden;
+}
+.delete-task:hover {
+  cursor: pointer;
+}
+.delete-column:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+.default-task-name:hover {
+  cursor: pointer;
+}
+.default-task-name {
+  padding-left: 10px;
+  max-width: 218px;
+  overflow: hidden;
+  display: inline-flex;
+  min-height: 35px;
+  align-items: center;
+}
+.save-task-btn:hover {
+  color: $success-green-color;
+}
+.save-task-btn {
+  font-size: 1em;
+  color: $default-grey-color;
+}
+.task-text-area {
+  min-width: 179px;
+  max-width: 180px;
+  min-height: 54px;
+  font-size: 1.2em;
+}
+
+/*Dragula's init styles*/
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
