@@ -26,9 +26,10 @@ export const TaskCardHeader = () => {
 
   const deleteColumnFromDesk = () => {
     const deleteColumnBtn = event.srcElement;
-    const taskListItem = deleteColumnBtn.parentNode.parentNode;
-    const askListItem = deleteColumnBtn.parentNode.parentNode.parentNode;
-    askListItem.removeChild(taskListItem);
+    const taskList = deleteColumnBtn.parentNode.parentNode.parentNode;
+    const taskListWrap = deleteColumnBtn.parentNode.parentNode.parentNode.parentNode;
+    
+    taskListWrap.removeChild(taskList);
   };
 
   const changeTaskColumnName = (val) => {
